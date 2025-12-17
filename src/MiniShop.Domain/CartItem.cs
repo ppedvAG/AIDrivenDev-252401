@@ -4,8 +4,19 @@ namespace MiniShop.Domain;
 
 public class CartItem
 {
-    public int Quantity { get; set; }
-    public DateTime AddedAt { get; set; }
-    public string Note { get; set; } = string.Empty;
-    public Product Product { get; set; } = new Product();
+    public Guid ProductId { get; }
+    public int Quantity { get; private set; }
+
+    public CartItem(Guid productId, int quantity)
+    {
+        if (quantity <= 0) throw new ArgumentException("Quantity must be > 0");
+        ProductId = productId;
+        Quantity = quantity;
+    }
+
+    public void Increase(int amount)
+    {
+        if (amount <= 0) throw new ArgumentException("Increase must be > 0");
+        Quantity += amount;
+    }
 }
