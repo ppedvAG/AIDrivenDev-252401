@@ -5,6 +5,10 @@
     <ProjectReference Include="..\MiniShop.Application\MiniShop.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="OpenAI" Version="2.8.0" />
+  </ItemGroup>
+
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
