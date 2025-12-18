@@ -1,6 +1,7 @@
 ﻿using MiniShop.Domain;
 using MiniShop.Application;
 using MiniShop.Application.Ai;
+using MiniShop.Infrastructure.Ai;
 
 var product = new Product(
     Guid.NewGuid(),

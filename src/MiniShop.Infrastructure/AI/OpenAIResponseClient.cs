@@ -1,8 +1,8 @@
 using OpenAI;
 using OpenAI.Chat;
+using MiniShop.Application.Ai;
 
-
-namespace MiniShop.Application.Ai;
+namespace MiniShop.Infrastructure.Ai;
 
 public sealed class OpenAiResponsesClient : ILlmClient
 {

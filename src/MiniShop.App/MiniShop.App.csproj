@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\MiniShop.Domain\MiniShop.Domain.csproj" />
     <ProjectReference Include="..\MiniShop.Application\MiniShop.Application.csproj" />
+    <ProjectReference Include="..\MiniShop.Infrastructure\MiniShop.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

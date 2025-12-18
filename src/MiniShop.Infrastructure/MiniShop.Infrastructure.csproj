@@ -1,7 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\MiniShop.Domain\MiniShop.Domain.csproj" />
+    <ProjectReference Include="..\MiniShop.Application\MiniShop.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenAI" Version="2.8.0" />
   </ItemGroup>
 
   <PropertyGroup>

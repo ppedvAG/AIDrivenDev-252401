@@ -1,8 +1,9 @@
 using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using MiniShop.Application.Ai;
 
-namespace MiniShop.Application.Ai;
+namespace MiniShop.Infrastructure.Ai;
 
 public sealed class LocalLlmClient : ILlmClient
 {
