@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShop.Application", "Min
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShop.App", "MiniShop.App\MiniShop.App.csproj", "{FE1FE296-2280-4666-B885-2745B5B7BCDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShop.Applications.Tests", "..\tests\MiniShop.Applications.Tests\MiniShop.Applications.Tests.csproj", "{60F3E8C9-A96D-4F48-BE7C-64859ECD9EB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShop.Domain.Tests", "..\tests\MiniShop.Domain.Tests\MiniShop.Domain.Tests.csproj", "{5CC86B58-61BB-4DB8-A510-267406FD736C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +28,13 @@ Global
 		{FE1FE296-2280-4666-B885-2745B5B7BCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE1FE296-2280-4666-B885-2745B5B7BCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FE1FE296-2280-4666-B885-2745B5B7BCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60F3E8C9-A96D-4F48-BE7C-64859ECD9EB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60F3E8C9-A96D-4F48-BE7C-64859ECD9EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60F3E8C9-A96D-4F48-BE7C-64859ECD9EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60F3E8C9-A96D-4F48-BE7C-64859ECD9EB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CC86B58-61BB-4DB8-A510-267406FD736C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC86B58-61BB-4DB8-A510-267406FD736C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC86B58-61BB-4DB8-A510-267406FD736C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC86B58-61BB-4DB8-A510-267406FD736C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
