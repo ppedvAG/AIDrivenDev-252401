@@ -6,26 +6,32 @@
 <div class="hero-section">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-        <h1 class="hero-title">Your shopping deserves the best!</h1>
-        <p class="hero-subtitle">FIND TRUSTED PRODUCTS, SERVICES, DEALS AND MORE.</p>
+        <h1 class="hero-title">Discover Amazing Products!</h1>
+        <p class="hero-subtitle">FIND QUALITY ITEMS, GREAT DEALS, AND FAST DELIVERY.</p>
 
         <!-- Search Bar -->
         <div class="search-bar-container">
             <div class="search-input-group">
                 <label class="search-label">SEARCH FOR</label>
-                <input type="text" class="search-input" placeholder="Golden Retriever">
+                <input type="text" class="search-input" placeholder="Coffee, Tea, Mugs...">
             </div>
             <div class="search-input-group">
                 <label class="search-label">IN WHICH CATEGORY</label>
                 <select class="search-input" style="background:transparent;">
-                    <option>Shop Businesses</option>
-                    <option>Products</option>
-                    <option>Services</option>
+                    <option>All Products</option>
+                    <option>Beverages</option>
+                    <option>Electronics</option>
+                    <option>Home & Living</option>
                 </select>
             </div>
             <div class="search-input-group">
-                <label class="search-label">WHERE ARE YOU LOOKING</label>
-                <input type="text" class="search-input" placeholder="Plovdiv, Bulgaria">
+                <label class="search-label">PRICE RANGE</label>
+                <select class="search-input" style="background:transparent;">
+                    <option>Any Price</option>
+                    <option>Under €10</option>
+                    <option>€10 - €50</option>
+                    <option>Over €50</option>
+                </select>
             </div>
             <button class="btn btn-search">SEARCH</button>
         </div>
@@ -40,33 +46,33 @@
             <!-- Card 1 -->
             <div class="col-md-4 mb-4">
                 <div class="explore-card">
-                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="explore-card-bg" alt="Magazine">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="explore-card-bg" alt="Products">
                     <div class="explore-card-content">
-                        <h3 class="card-title">Shop Magazine</h3>
-                        <p class="card-subtitle">FIND INSPIRATION</p>
-                        <a href="#" class="btn-card">READ NOW</a>
+                        <h3 class="card-title">Browse Products</h3>
+                        <p class="card-subtitle">DISCOVER OUR CATALOG</p>
+                        <a asp-controller="Products" asp-action="Index" class="btn-card">SHOP NOW</a>
                     </div>
                 </div>
             </div>
             <!-- Card 2 -->
             <div class="col-md-4 mb-4">
                 <div class="explore-card">
-                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="explore-card-bg" alt="Services">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="explore-card-bg" alt="Cart">
                     <div class="explore-card-content">
-                        <h3 class="card-title">Shop Services</h3>
-                        <p class="card-subtitle">FIND EXPERTS</p>
-                        <a href="#" class="btn-card">DISCOVER NOW</a>
+                        <h3 class="card-title">My Cart</h3>
+                        <p class="card-subtitle">VIEW & CHECKOUT</p>
+                        <a asp-controller="Cart" asp-action="Index" class="btn-card">VIEW CART</a>
                     </div>
                 </div>
             </div>
             <!-- Card 3 -->
             <div class="col-md-4 mb-4">
                 <div class="explore-card">
-                    <img src="https://images.unsplash.com/photo-1472851294608-415522f96319?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="explore-card-bg" alt="Products">
+                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="explore-card-bg" alt="Orders">
                     <div class="explore-card-content">
-                        <h3 class="card-title">Shop Products</h3>
-                        <p class="card-subtitle">FIND THE BEST PRODUCTS</p>
-                        <a href="#" class="btn-card">SHOP NOW</a>
+                        <h3 class="card-title">My Orders</h3>
+                        <p class="card-subtitle">TRACK YOUR PURCHASES</p>
+                        <a asp-controller="Orders" asp-action="Index" class="btn-card">VIEW ORDERS</a>
                     </div>
                 </div>
             </div>

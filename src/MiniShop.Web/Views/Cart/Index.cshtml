@@ -5,67 +5,88 @@
     ViewData["Title"] = "Shopping Cart";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Shopping Cart</h1>
-    <p>Cart ID: @Model.Id</p>
-</div>
-
-<div class="row mt-4">
-    <div class="col-md-6">
-        <h3>Add Item</h3>
-        <form asp-action="Add" method="post">
-            <div class="mb-3">
-                <label for="productName" class="form-label">Product Name</label>
-                <input type="text" class="form-control" id="productName" name="productName" value="Coffee" required>
-            </div>
-            <div class="mb-3">
-                <label for="productId" class="form-label">Product ID</label>
-                <input type="text" class="form-control" id="productId" name="productId" value="@Guid.NewGuid()" required>
-            </div>
-            <div class="mb-3">
-                <label for="price" class="form-label">Price (EUR)</label>
-                <input type="number" class="form-control" id="price" name="price" value="2.50" step="0.01" required>
-            </div>
-            <div class="mb-3">
-                <label for="quantity" class="form-label">Quantity</label>
-                <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Add to Cart</button>
-        </form>
-
-        @if (!ViewData.ModelState.IsValid)
-        {
-            <div class="alert alert-danger mt-3">
-                @Html.ValidationSummary()
-            </div>
-        }
+<div class="container my-5">
+    <div class="row mb-4">
+        <div class="col">
+            <h1 class="fw-bold">Shopping Cart</h1>
+            <p class="text-muted">Review and manage your items</p>
+        </div>
     </div>
 
-    <div class="col-md-6">
-        <h3>Cart Contents</h3>
-        @if (Model.Items.Any())
-        {
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Product ID</th>
-                        <th>Quantity</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach (var item in Model.Items)
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold mb-4">Cart Items</h5>
+                    @if (Model.Items.Any())
                     {
-                        <tr>
-                            <td>@item.ProductId</td>
-                            <td>@item.Quantity</td>
-                        </tr>
+                        <div class="table-responsive">
+                            <table class="table align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Product ID</th>
+                                        <th>Quantity</th>
+                                        <th class="text-end">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Items)
+                                    {
+                                        <tr>
+                                            <td><code>@item.ProductId.ToString().Substring(0, 8)...</code></td>
+                                            <td><span class="badge bg-secondary">@item.Quantity</span></td>
+                                            <td class="text-end">
+                                                <button class="btn btn-sm btn-outline-danger">Remove</button>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
                     }
-                </tbody>
-            </table>
-        }
-        else
-        {
-            <p class="text-muted">Your cart is empty.</p>
-        }
+                    else
+                    {
+                        <div class="text-center py-5">
+                            <p class="text-muted">Your cart is empty.</p>
+                            <a asp-controller="Products" asp-action="Index" class="btn btn-login mt-3">Browse Products</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold mb-4">Add Item to Cart</h5>
+                    <form asp-action="Add" method="post">
+                        <div class="mb-3">
+                            <label for="productName" class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="productName" name="productName" value="Premium Coffee" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="productId" class="form-label">Product ID</label>
+                            <input type="text" class="form-control" id="productId" name="productId" value="@Guid.NewGuid()" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Price (EUR)</label>
+                            <input type="number" class="form-control" id="price" name="price" value="2.50" step="0.01" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1" required>
+                        </div>
+                        <button type="submit" class="btn btn-login w-100">Add to Cart</button>
+                    </form>
+
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger mt-3">
+                            @Html.ValidationSummary()
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
     </div>
 </div>
